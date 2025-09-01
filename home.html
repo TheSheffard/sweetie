@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="home.css" />
+  <body>
+      <div class="header">
+       <img
+        src="images/NAMA_Logo.jpeg"
+        width="120px"
+        style="object-fit: cover"
+        height="80px"
+      />
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-links">
+            <a href="#about">About NAMA</a>
+        <a href="roster.html">Daily Roaster</a>
+        </nav>
+        
+        <!-- Mobile Navigation Toggle Button -->
+        <button class="menu-toggle" aria-label="Toggle mobile menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav">
+        <div class="mobile-links">
+           <a href="#about">About NAMA</a>
+        <a href="roster.html">Daily Roaster</a>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="face">
+      <h1>
+        Ensuring Safe and Efficient <br />
+        Airspace Management
+      </h1>
+      <p>
+        Commited to providing reliable and high quality air navigation services
+        <br />
+        across Nigeria
+      </p>
+      <button class="btn-1">Learn More</button>
+    </div>
+    <div class="next" id="about">
+      <h1>Who We Are</h1>
+      <p>
+        The Nigerian Airspace Management Agency (NAMA) is the sole air
+        navigation service <br />provider in Nigeria. We are responsible for
+        providing safe, effective and economical air <br />navigation services
+        to all airspace users, both civil and military. Our mission is to<br />
+        transform the Nigerian airspace into one of the safest in the world
+      </p>
+      <div class="hands">
+        <button class="btn-2 btn">24/7 Operations</button>
+        <button class="btn-3 btn">Advanced Technology</button>
+        <button class="btn-4 btn">Skilled Professionals</button>
+      </div>
+    </div>
+    <div class="departments">
+      <h1>View Department Roaster</h1>
+      <div class="dropdown">
+        <label for="department">Select a Department:</label>
+        <select id="department" name="department">
+          <option value="" disabled selected>--Choose a Department--</option>
+          <option value="AIS">AIS Department</option>
+          <option value="mechanic">Electro-Mech Department</option>
+          <option value="communication">Communication Department</option>
+          <option value="account">Account Department</option>
+          <option value="ICT">ICT Department</option>
+        </select>
+      </div>
+    </div>
+    <div class="shape-container">
+      <!-- <div class="rectangle first">
+            <p>John Adebayo-Software Engineer</p>
+        </div> -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

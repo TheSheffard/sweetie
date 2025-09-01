@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+.header {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 5%;
+    height: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.header img {
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.desktop-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.desktop-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+.desktop-links a:nth-child(2){
+  background: blue;
+}
+
+
+.desktop-links a:hover {
+    background-color: #1a4b8c;
+    color: white;
+}
+.links a:nth-child(2){
+    background-color: #004d99;
+    color: #f0f0f0;
+    border-color: #004d99;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+.face{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.face h1{
+    font-size: 60px;
+    margin-top: 150px;
+    color: #f0f0f0;
+}
+.face p{
+    font-size: 20px;
+    margin-top: 40px;
+    color: #f0f0f0;
+}
+.btn-1{
+    background-color: #f0f0f0;
+    color: #004d99;
+    border-color: #004d99;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px 20px 20px 20px;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.btn-1:hover{
+    background-color: #004d99;
+    color: #f0f0f0;
+}
+.next{
+    text-align: center;
+    padding: 70px;
+    justify-content: space-evenly;
+    gap: 40px;
+    background-color: lightgrey;
+}
+.next h1{
+    margin-top: 30px;
+    color: #004d99;
+    font-weight: bold;
+    font-size: 40px;
+}
+.next p{
+    /* width: 73ch; */
+    margin: auto;
+    font-size: 17px;
+    padding: 20px;
+}
+
+.hands{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    gap: 30px;
+}
+.btn{
+    width: 170px;
+    height: 40px;
+    background-color: #004d99;
+    color: #f0f0f0;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    justify-content: space-evenly;
+}
+.departments{
+    text-align: center;
+    padding: 70px;
+    color:#004d99;
+}
+.dropdown{
+    margin-top: 25px;
+    /* margin-bottom: 200px; */
+
+}
+label {
+    font-size: 16px;
+    margin-right: 15px;
+}
+select{
+    padding: 6px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 250px;
+    max-height: 40px;
+    background-color: rgb(207, 217, 225);
+    text-align: center;
+    text-align-last:center ;
+    cursor: pointer;
+    appearance: none;
+}
+select option:not([disabled]){
+    padding: 8px;
+    text-align: left;
+}
+select{
+    overflow-y: auto;
+}
+.shape-container{
+    padding-inline: 10px;
+    background-color: lightgrey;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding: 15px;
+    gap: 10px;
+    margin-bottom: 50px;
+    align-self: center;
+    justify-content: space-evenly;
+}
+.rectangle{
+    width: 100%;
+    height: 70px;
+    background-color: #f0f0f0;
+    align-content: center;
+    padding: 15px;
+}
+
+
+
+/* --- Mobile Navigation Styles --- */
+
+
+/* Initially hide the mobile menu and show the toggle button */
+.mobile-nav {
+    position: fixed;
+    top: 100px; 
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 999;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-nav.is-open {
+    transform: translateY(0);
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.mobile-links a:nth-child(2){
+  background: blue;
+  width: fit;
+  border-radius: 30px;
+}
+
+.mobile-links a {
+    text-decoration: none;
+    color: #1a4b8c;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 80%;
+    text-align: center;
+}
+
+.mobile-links a:hover {
+    color: #ff7e30;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+    display: none; 
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+    padding: 0;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    margin: 6px auto;
+}
+
+.menu-toggle.is-open .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.is-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-open .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Desktop Styles (for screens larger than 768px) */
+@media (min-width: 769px) {
+    .desktop-links {
+        display: flex; /* Show desktop nav */
+    }
+    .menu-toggle {
+        display: none; /* Hide toggle button */
+    }
+    .mobile-nav {
+        display: none; /* Hide mobile menu */
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-links {
+        display: none; /* Hide desktop nav */
+    }
+    .menu-toggle {
+        display: block; /* Show toggle button */
+    }
+    
+    .face h1{
+        font-size: 25px;
+    }
+    .face p{
+        font-size: 14px;
+    }
+    .hands{
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    .next{
+        padding: 50px;
+    }
+    .shape-container{
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 600px) {
+  
+}
